@@ -1,5 +1,6 @@
 package controller;
 
+import app.GreetingServer;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -22,7 +23,6 @@ public class ServerController {
     String massageIn="";
 
     public void initialize(){
-        new Thread(()->{
             try {
                 serverSocket =new ServerSocket(5000);
                 System.out.println("Server Stated");
@@ -44,9 +44,10 @@ public class ServerController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }).start();
-    }
+        Thread t = new Thread();
+        t.start();
 
+    }
 
 
 
