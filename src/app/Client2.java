@@ -1,10 +1,11 @@
 package app;
 
+
 import java.util.*;
 import java.net.*;
 import java.io.*;
 
-public class Client
+public class Client2
 {
 
     public static void main(String[] args)
