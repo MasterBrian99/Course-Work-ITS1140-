@@ -39,7 +39,7 @@ public class LoginController {
 
                     while (!messageIn.equals("end")){
                         messageIn=dataInputStream.readUTF();
-                        txtUsername.appendText(name+" "+messageIn.trim());
+                        txtAllMessages.appendText("\nServer :"+messageIn.trim());
                     }
 
 
@@ -72,11 +72,11 @@ public class LoginController {
 
     }
 
-    public void sendBtnOnAction(ActionEvent actionEvent) throws IOException {
+
+
+    public void sendOnAction(ActionEvent actionEvent) throws IOException {
         String se=txtSedMessages.getText();
         dataOutputStream.writeUTF(name+" : "+ se+"\n");
-        txtAllMessages.appendText(name+" : "+ se+"\n");
-
-
+        txtAllMessages.appendText("\n"+name+" : "+ se);
     }
 }
